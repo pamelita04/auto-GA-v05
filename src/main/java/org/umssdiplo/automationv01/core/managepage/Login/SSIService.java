@@ -39,8 +39,14 @@ public class SSIService extends BasePage {
     @FindBy(id = "button-detail")
     private WebElement buttonDetail;
 
-    @FindBy(id = "button-catalog")
-    private WebElement buttonCatalog;
+    @FindBy(id = "tab-catalog")
+    private WebElement tabCatalog;
+
+    @FindBy(id = "button-delete")
+    private WebElement buttonDelete;
+
+    @FindBy(id = "button-add-image")
+    private WebElement buttonAddImage;
 
     @FindBy(id = "mat-input-0")
     private WebElement inputModelo;
@@ -84,7 +90,7 @@ public class SSIService extends BasePage {
     }
 
     public void redirectCatalog() {
-        CommonEvents.clickButton(buttonCatalog);
+        CommonEvents.clickButton(tabCatalog);
     }
 
     public void llenarInfoItem(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
@@ -99,12 +105,24 @@ public class SSIService extends BasePage {
         CommonEvents.clickButton(buttonSave);
     }
 
-    public void verificarRegistro() {
+    public void verificarEnLista() {
         CommonEvents.clickButton(buttonBack);
     }
 
     public void clickButtonViewDetailItem() {
         CommonEvents.clickButton(buttonDetail);
+    }
+
+    public void eliminarItemSeleccionado() {
+        CommonEvents.clickButton(buttonDelete);
+    }
+
+    public void verificarVentanaArchivos() {
+        CommonEvents.clickButton(buttonAddImage);
+    }
+
+    public void seleccionPorCategoria(String categoria) {
+        CommonEvents.setInputFieldSelect(selectCategoria, categoria);
     }
 
 //    public RegistrarMarquinaria clickRegistrarMaquinariTab() {

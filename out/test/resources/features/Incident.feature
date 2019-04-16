@@ -28,6 +28,18 @@ Feature: Funcionalidad de Incidentes
     Given 'IsoCode' page is loaded
     And choose option one click 'Catalog'
 
+
+
+  Scenario Outline: Verificar filtro por categoria
+    Given 'IsoCode' page is loaded
+    And seleccionar el filtro por "<categoria>"
+
+    Examples:
+      | categoria |
+      | Gruas     |
+
+
+
   Scenario: Ver detalle de item
     Given 'IsoCode' page is loaded
     And choose option one click 'Ver detalle' on card item

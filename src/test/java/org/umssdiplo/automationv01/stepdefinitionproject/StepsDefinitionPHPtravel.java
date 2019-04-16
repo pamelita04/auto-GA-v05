@@ -66,8 +66,25 @@ public class StepsDefinitionPHPtravel {
         ssiService.llenarInfoItem(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    @Then("^verificar el registro del item$")
-    public void verificarElRegistroDelItem() {
-        ssiService.verificarRegistro();
+    @Then("^verificar en la lista 'Catalog'$")
+    public void verificarEnLaListaCatalog() {
+        ssiService.verificarEnLista();
+    }
+
+    @And("^presionar botton 'Eliminar'$")
+    public void presionarBottonEliminar() {
+        ssiService.eliminarItemSeleccionado();
+    }
+
+    @And("^presionar botton 'Añadir Imagen'$")
+    public void presionarBottonAñadirImagen() {
+        ssiService.verificarVentanaArchivos();
+    }
+
+
+    @And("^seleccionar el filtro por \"([^\"]*)\"$")
+    public void seleccionarElFiltroPor(String catogoria) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        ssiService.seleccionPorCategoria(catogoria);
     }
 }

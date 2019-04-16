@@ -4,10 +4,28 @@ Feature: Funcionalidad de Items
     Given 'IsoCode' page is loaded
     And presionar botton 'Plus'
     And llenar informacion "<modelo>" and "<marca>" and "<categoria>" and "<potencia>" and "<estado>" and "<cantidad>" and "<precio>" del item
-    Then verificar el registro del item
+    Then verificar en la lista 'Catalog'
 
     Examples:
       | modelo  | marca    | categoria  | potencia | estado | cantidad | precio |
       | AFD     | Mercedes | Tractores  | 200      |      1 |      5   | 2000   |
       | XYZ     | Mercedes | Tractores  | 200      |      1 |      5   | 2000   |
 
+
+
+
+
+  Scenario: Eliminar un item
+    Given 'IsoCode' page is loaded
+    And choose option one click 'Ver detalle' on card item
+    And presionar botton 'Eliminar'
+    Then  verificar en la lista 'Catalog'
+
+
+
+
+
+  Scenario: Verificar 'Añadir Imagen' muestre la ventana de archivos
+    Given 'IsoCode' page is loaded
+    And presionar botton 'Plus'
+    And presionar botton 'Añadir Imagen'
