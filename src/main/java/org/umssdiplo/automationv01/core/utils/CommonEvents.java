@@ -23,6 +23,11 @@ public class CommonEvents {
         webElement.sendKeys(content);
     }
 
+    public static void setInputFieldSelect(WebElement webElement, String content) {
+        ManageDriver.getInstance().getWebDriverWait().until(ExpectedConditions.visibilityOf(webElement));
+        webElement.sendKeys(content);
+    }
+
     /**
      * This method perform a click action in a web element.
      *
