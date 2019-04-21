@@ -57,6 +57,9 @@ public class SSIService extends BasePage {
     @FindBy(id = "mat-select-2")
     private WebElement selectCategoria;
 
+    @FindBy(id = "filter-select")
+    private WebElement filterSelect;
+
     @FindBy(id = "mat-input-1")
     private WebElement inputPotencia;
 
@@ -122,8 +125,9 @@ public class SSIService extends BasePage {
     }
 
     public void seleccionPorCategoria(String categoria) {
-        CommonEvents.setInputFieldSelect(selectCategoria, categoria);
+        CommonEvents.setInputFieldSelect(filterSelect, categoria);
     }
+
 
 //    public RegistrarMarquinaria clickRegistrarMaquinariTab() {
 //        clickButton(registrarMaquinariaTab);
