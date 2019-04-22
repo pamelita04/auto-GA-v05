@@ -23,14 +23,7 @@ public class Login extends BasePage {
     private WebElement tabHombre;
 
     public void clickTabHombre() {
-        CommonEvents.hoverToElement("html/body/div[2]/div/div/div[1]/div/div[3]/div/div[1]/div[1]/a");
+        CommonEvents.hoverToElement(tabHombre);
     }
 
-    public void setCredentials() {
-        String username = PropertyAccessor.getInstance().getUser();
-        String password = PropertyAccessor.getInstance().getPassword();
-        CommonEvents.setInputField(usernameInputField, username);
-        CommonEvents.setInputField(passwordInputField, password);
-        CommonEvents.clickButton(loginBtn);
-    }
 }

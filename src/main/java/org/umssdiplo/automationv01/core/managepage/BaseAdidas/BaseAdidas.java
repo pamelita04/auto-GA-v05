@@ -11,7 +11,7 @@ public class BaseAdidas extends BasePage {
     private WebElement tabHombre;
 
     public void clickTabHombre() {
-//        CommonEvents.hoverToElement(tabHombre.);
+//        CommonEvents.hoverToElement(tabHombre);
     }
 }
 
