@@ -7,7 +7,19 @@ Feature: Login
 
   Scenario: Home page is displayed
     Given 'www.adidas.mx' page is loaded
-    And click tab 'Hombre'
+    And Hover 'Hombre' tab
+    And click button 'Futbol'
+    And Get price from first item
+    And Click first element
+    And Select first size
+    And Click button in 'Add to Cart'
+    And get amount from item
+    And Verify that the amount is 1
+    And Click 'See Cart' link
+    And Get item name title
+    And Verify "CALZADO DE FÚTBOL X 18.3 TF" title is displayed
+    And Price should be "1329" USD
+    And Price Total should be "$1,428.00" USD
 
 
 
