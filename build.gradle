@@ -5,6 +5,7 @@ group 'org.umssdiplo.automationv01'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 
@@ -20,6 +21,8 @@ buildscript{
 
     dependencies{
         classpath 'net.masterthought:cucumber-reporting:3.17.1'
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+        
     }
 }
 
@@ -35,6 +38,8 @@ dependencies {
 
     // cucumber-testng
     testCompile group: 'info.cukes', name: 'cucumber-testng', version: '1.2.5'
+
+    compile("org.springframework.boot:spring-boot-starter-web")
 }
 
 task runFeatures(type: Test) {
