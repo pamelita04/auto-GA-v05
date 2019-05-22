@@ -1,4 +1,4 @@
-Feature: As a user, I want to look for something on a search engine
+  Feature: As a user, I want to look for something on a search engine
 
   Scenario: I do my research and get some results
 

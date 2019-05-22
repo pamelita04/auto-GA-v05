@@ -1,4 +1,4 @@
-Feature: As a user, I want to look for an article on Wikipedia
+  Feature: As a user, I want to look for an article on Wikipedia
 
   Scenario: I want to find an article on Wikipedia
     Given I am on the search engine home page "https://en.wikipedia.org"
