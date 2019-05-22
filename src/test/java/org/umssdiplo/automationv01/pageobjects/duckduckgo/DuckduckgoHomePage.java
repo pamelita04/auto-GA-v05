@@ -22,6 +22,7 @@ public class DuckduckgoHomePage extends PageObject {
 	}
 	
 	public DuckduckgoResultsPage clickOnSearchButton() {
+		
 		searchButton.click();
 		return new DuckduckgoResultsPage(webdriver);
 	}
