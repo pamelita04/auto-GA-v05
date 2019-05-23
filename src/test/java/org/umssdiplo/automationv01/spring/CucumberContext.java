@@ -1,13 +1,14 @@
 package org.umssdiplo.automationv01.spring;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
+import org.umssdiplo.automationv01.beans.ChromeWebDriver;
+//import org.umssdiplo.automationv01.beans.FirefoxWebDriver;
 
 @Configuration
 @ContextConfiguration(classes={PropertiesContext.class})
@@ -21,11 +22,11 @@ public class CucumberContext {
 		WebDriver webdriver = null;
 		switch (webbrowser) {
 			case "firefox":
-				webdriver = new FirefoxDriver();
+//				webdriver = new FirefoxWebDriver();
 				break;
 			
 			case "chrome":
-				webdriver = new ChromeDriver();
+				webdriver = new ChromeWebDriver();
 				break;
 		}
 		return webdriver; 
