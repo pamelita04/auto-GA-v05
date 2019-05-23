@@ -29,6 +29,7 @@ public class StepsSearchEngine extends ParentSteps {
 	
 	@Given("^I am on the search engine home page \"([^\"]*)\"$")
 	public void i_am_on_the_search_engine_home_page(String url) throws Throwable {
+		System.out.println("-----=====-----"+url+"======----------");
 		webdriver.get(url);
 		homePage = new DuckduckgoHomePage(webdriver);
 	}
